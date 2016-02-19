@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="marge-sm col-lg-6">
+         {{ form(form) }}
+    <div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/addTag.js') }}" charset="UTF-8"></script>
+{% endblock %}

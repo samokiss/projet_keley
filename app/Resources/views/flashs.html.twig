@@ -1,0 +1,14 @@
+{# flashs.html.twig #}
+<div id="flashs ">
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }} alert-dismissable">
+                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">X</button>
+                    <span class="alert-link">
+                        {{ type | capitalize }} !
+                    </span>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
